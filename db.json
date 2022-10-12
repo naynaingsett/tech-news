@@ -3,6 +3,7 @@
     "name": "Tom Sett",
     "position": "Web Developer",
     "image": "https://pbs.twimg.com/profile_images/1556604764053721088/0vKcNK-q_400x400.jpg",
+    "website": "https://naysett20.netlify.app",
     "description": "This project is powered by NewsAPI"
   }
 }

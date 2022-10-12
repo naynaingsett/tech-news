@@ -37,6 +37,7 @@ export const About = ({ employee }) => {
             <h3>{employee.name}</h3>
             <h6>{employee.position}</h6>
             <img src={employee.image} alt="employee" />
+            <p>{employee.website}</p>
             <p>{employee.description}</p>
           </div>
         </div>
