@@ -25,7 +25,7 @@ export default function Home({articles}) {
 }
 export const getServerSideProps = async pageContext => {
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=4&page=1&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=6&page=1&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
   ).then(res => res.json());
 
   const { articles } = apiResponse;

@@ -50,7 +50,7 @@ export const getServerSideProps = async pageContext => {
   }
 
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=10&page=${pageNumber}&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=12&page=${pageNumber}&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
   ).then(res => res.json());
 
   const { articles } = apiResponse;
