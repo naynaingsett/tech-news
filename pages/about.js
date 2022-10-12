@@ -1,29 +1,29 @@
 import Head from 'next/head';
-import styles from '../styles/EOM.module.css';
+import styles from '../styles/About.module.css';
 import { Toolbar } from '../components/toolbar';
 
-export const EOM = ({ employee }) => {
+export const About = ({ employee }) => {
   return (
     <>
       <Head>
-        <title>Employee Of The Month</title>
+        <title>About</title>
         <meta
           name="description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`This project is developed by ${employee.name}`}
         />
 
         <meta property="og:image" content={employee.image} />
-        <meta property="og:title" content="Employee Of The Month" />
+        <meta property="og:title" content="About" />
         <meta
           property="og:description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`This project is developed by ${employee.name}`}
         />
 
         <meta property="twitter:image" content={employee.image} />
-        <meta property="twitter:title" content="Employee Of The Month" />
+        <meta property="twitter:title" content="About" />
         <meta
           property="twitter:description"
-          content={`This month's employee of the month is ${employee.name}`}
+          content={`This project is developed by ${employee.name}`}
         />
       </Head>
 
@@ -31,7 +31,7 @@ export const EOM = ({ employee }) => {
         <Toolbar />
 
         <div className={styles.main}>
-          <h1>Employee Of The Month</h1>
+          <h1>Developed by</h1>
 
           <div className={styles.employeeOfTheMonth}>
             <h3>{employee.name}</h3>
@@ -47,10 +47,9 @@ export const EOM = ({ employee }) => {
 
 export const getServerSideProps = async pageContext => {
   const apiResponse = await fetch(
-    'https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth',
+    'https://my-json-server.typicode.com/naynaingsett/tech-news/aboutTheDeveloper',
   );
   const employee = await apiResponse.json();
-
   return {
     props: {
       employee,
@@ -58,4 +57,4 @@ export const getServerSideProps = async pageContext => {
   };
 };
 
-export default EOM;
+export default About;

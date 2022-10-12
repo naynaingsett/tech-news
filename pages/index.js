@@ -12,7 +12,7 @@ export default function Home({articles}) {
           <div key={index} className={styles.post}>
             <h1 onClick={() => (window.location.href = article.url)}>{article.title}</h1>
             <p>{article.description}</p>
-            {!!article.urlToImage && <img src={article.urlToImage}/>}
+            {!!article.urlToImage && <img src={article.urlToImage} alt='image'/>}
           </div>
           ))}
         </div>
@@ -22,7 +22,7 @@ export default function Home({articles}) {
 }
 export const getServerSideProps = async pageContext => {
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=10&page=1&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
+    `https://newsapi.org/v2/top-headlines?country=us&category=technology&pagesize=4&page=1&apiKey=${process.env.NEXT_APP_NEWS_API_KEY}`,
   ).then(res => res.json());
 
   const { articles } = apiResponse;

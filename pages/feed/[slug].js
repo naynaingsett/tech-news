@@ -1,10 +1,8 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import styles from '../../styles/Feed.module.css';
 import { Toolbar } from '../../components/toolbar';
-
+import { Paginator } from '../../components/paginator';
 export const Feed = ({ articles, pageNumber }) => {
-  const router = useRouter();
   return articles.length ? (
     <>
       <Head>
@@ -14,42 +12,18 @@ export const Feed = ({ articles, pageNumber }) => {
       </Head>
       <div className='page-container'>
         <Toolbar />
-
+        <Paginator pageNumber={pageNumber}/>
         <div className={styles.main}>
           {articles.map((article, index) => (
             <div key={index} className={styles.post}>
               <h1 onClick={() => (window.location.href = article.url)}>{article.title}</h1>
               <p>{article.description}</p>
-              {!!article.urlToImage && <img src={article.urlToImage} className={styles.img}/>}
+              {!!article.urlToImage && <img src={article.urlToImage} alt='image' className={styles.img}/>}
             </div>
           ))}
         </div>
 
-        <div className={styles.paginator}>
-          <div
-            className={pageNumber === 1 ? styles.disabled : styles.active}
-            onClick={() => {
-              if (pageNumber > 1) {
-                router.push(`/feed/${pageNumber - 1}`).then(() => window.scrollTo(0, 0));
-              }
-            }}
-          >
-            Previous Page
-          </div>
-
-          <div>#{pageNumber}</div>
-
-          <div
-            className={pageNumber === 5 ? styles.disabled : styles.active}
-            onClick={() => {
-              if (pageNumber < 5) {
-                router.push(`/feed/${pageNumber + 1}`).then(() => window.scrollTo(0, 0));
-              }
-            }}
-          >
-            Next Page
-          </div>
-        </div>
+        <Paginator pageNumber={pageNumber}/>
       </div>
     </>
   ) : (
