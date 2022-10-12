@@ -3,7 +3,7 @@ import styles from '../../styles/Feed.module.css';
 import { Toolbar } from '../../components/toolbar';
 import { Paginator } from '../../components/paginator';
 export const Feed = ({ articles, pageNumber }) => {
-  return articles.length ? (
+  return articles ? (
     <>
       <Head>
         <title>TechNews</title>
