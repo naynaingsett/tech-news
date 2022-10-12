@@ -1,0 +1,16 @@
+.main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff
+}
+
+.main div {
+    margin: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
