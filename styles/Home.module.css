@@ -97,10 +97,6 @@
       padding: 5px;
       margin: 5px;
     }
-  
-    .post h1 {
-      font-size: 0.1rem;
-    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -114,9 +110,5 @@
       height: auto;
       padding: 25px;
       margin: 25px;
-    }
-  
-    .post h1 {
-      font-size: 0.1rem;
     }
 }
