@@ -15,7 +15,7 @@ export const Feed = ({ articles, pageNumber }) => {
         <Toolbar />
         <Paginator pageNumber={pageNumber}/>
         <div className={styles.main}>
-          {articles.map((article, index) => (
+          {articles && articles.map((article, index) => (
             <div key={index} className={styles.post}>
               <h1 onClick={() => (window.location.href = article.url)}>{article.title}</h1>
               <p>{article.description}</p>
