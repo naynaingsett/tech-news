@@ -1,9 +1,12 @@
 import styles from '../styles/Home.module.css';
 import { Toolbar } from '../components/toolbar';
-
+import Head from 'next/head'
 export default function Home({articles}) {
   return (
     <>
+      <Head>
+        <title>TechNews</title>
+      </Head>
       <Toolbar />
       <div className={styles.all}>
         <h1>Trending Tech News</h1>

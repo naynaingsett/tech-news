@@ -6,6 +6,7 @@ export const Feed = ({ articles, pageNumber }) => {
   return articles.length ? (
     <>
       <Head>
+        <title>TechNews</title>
         <meta property="og:image" content={articles[0]?.urlToImage} />
         <meta property="og:description" content={articles[0]?.description} />
         <meta property="og:title" content={articles[0]?.title + ' and more!'} />
