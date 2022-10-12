@@ -32,12 +32,11 @@ export const About = ({ employee }) => {
 
         <div className={styles.main}>
           <h1>Developed by</h1>
-
-          <div className={styles.employeeOfTheMonth}>
-            <h3>{employee.name}</h3>
-            <h6>{employee.position}</h6>
+          <div className={styles.about}>
+            <h2>{employee.name}</h2>
+            <p>{employee.position}</p>
             <img src={employee.image} alt="employee" />
-            <p>{employee.website}</p>
+            <a href={employee.website}><span>My website: naysett20.netlify.app</span></a>
             <p>{employee.description}</p>
           </div>
         </div>

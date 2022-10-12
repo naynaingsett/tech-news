@@ -7,11 +7,17 @@
     margin-top: 50px;
 }
 
-.employeeOfTheMonth {
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    font-weight: 700;
 }
 
-.employeeOfTheMonth img {
+.about img {
     width: 250px;
     border-radius: 100%;
+    margin-bottom: 10px;
 }
