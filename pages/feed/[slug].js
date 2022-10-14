@@ -40,7 +40,7 @@ export const Feed = ({ articles, pageNumber }) => {
 export const getServerSideProps = async pageContext => {
   const pageNumber = pageContext.query.slug;
 
-  if (!pageNumber || pageNumber < 1 || pageNumber > 10) {
+  if (!pageNumber || pageNumber < 1 || pageNumber > 5) {
     return {
       props: {
         articles: [],

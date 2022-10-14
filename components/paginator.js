@@ -18,9 +18,9 @@ export const Paginator = ({pageNumber}) => {
           <div>#{pageNumber}</div>
 
           <div
-            className={pageNumber === 10 ? styles.disabled : styles.active}
+            className={pageNumber === 5 ? styles.disabled : styles.active}
             onClick={() => {
-              if (pageNumber < 10) {
+              if (pageNumber < 5) {
                 router.push(`/feed/${pageNumber + 1}`).then(() => window.scrollTo(0, 0));
               }
             }}
